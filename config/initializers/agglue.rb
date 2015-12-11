@@ -8,6 +8,11 @@ puts "loading instance"
 $instance = APP_CONFIG['instance']
 $instance ||= 'Unknown'
 
+# metrics
+require "nunes"
+statsd = Statsd.new APP_CONFIG['metric'], 8125
+Nunes.subscribe(statsd)
+
 Rails.logger = ActFluentLoggerRails::Logger.
 new(log_tags: {
       instance: $instance,
