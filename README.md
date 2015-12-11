@@ -1,4 +1,4 @@
-Simple rails application, for infrastructure testing
+Simple rails application for infrastructure testing
 
 ## Thin
 
