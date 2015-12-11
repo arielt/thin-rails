@@ -44,3 +44,6 @@ gem 'redis'
 gem 'act-fluent-logger-rails'
 gem 'lograge'
 
+gem "statsd-ruby"
+gem 'nunes'
+
