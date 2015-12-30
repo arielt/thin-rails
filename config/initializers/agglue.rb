@@ -21,5 +21,5 @@ new(log_tags: {
       uid: ->(request) { request.session[:uid] }
 })
 
-Rails.logger.debug "starting RubyApp instance #{$instance}"
+Rails.logger.debug "starting RailsApp instance #{$instance}"
 Rails.logger.flush
