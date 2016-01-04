@@ -2,7 +2,8 @@ APP_CONFIG = YAML.load_file("#{Rails.root}/config/config.yml")
 puts "config #{APP_CONFIG}"
 
 puts "loading redis #{APP_CONFIG['cache']['ip']}:#{APP_CONFIG['cache']['port']}"
-$redis = Redis.new(:host => APP_CONFIG['redis'], :port => 6379)
+
+$redis = Redis.new(:host => APP_CONFIG['cache']['ip'], :port => APP_CONFIG['cache']['port'])
 
 puts "loading instance #{APP_CONFIG['instance']}"
 $instance = APP_CONFIG['instance']
